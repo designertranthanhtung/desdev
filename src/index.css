@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+@layer base {
+  .neon-text-cyan {
+    @apply text-neon-cyan drop-shadow-[0_0_8px_rgba(0,242,255,0.8)];
+  }
+  .neon-border-cyan {
+    @apply border-neon-cyan shadow-neon-glow;
+  }
+  .neon-bg-cyan {
+    @apply bg-neon-cyan shadow-neon-glow-strong;
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00f2ff, 0 0 20px #00f2ff;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00f2ff, 0 0 40px #00f2ff;
+  }
+}
